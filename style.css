@@ -1,0 +1,386 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111; /* Dark background */
+    color: #fff;
+}
+
+h1 {
+    color: #ff5e00; /* Neon orange for headings */
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo img {
+    height: 50px; /* Adjust as needed */
+    width: 50px; /* Make width equal to height for a perfect circle */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* This ensures the image covers the area properly */
+    border: 2px solid  #FF5C00; /* Optional: add a border around the logo */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Active and Hover Effects */
+.navbar ul li a:hover,
+.navbar ul li.active a {
+    color: #ff5e00;
+    background-color: rgba(255, 94, 0, 0.2);
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+.content {
+    position: relative;
+}
+
+h1 {
+    font-size: 60px; /* Larger font for heading */
+    margin-bottom: 20px; /* Space between heading and paragraph */
+    text-align: left; /* Align to left for better readability */
+}
+
+p {
+    font-size: 24px; /* Increased font size for clarity */
+    margin-top: 10px; /* Space above the paragraph */
+}
+
+.animate-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute; /* This allows overlapping */
+    font-weight: bold; /* Make text bold for emphasis */
+    font-size: 24px; /* Ensure the animated text is of good size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.animate-text:nth-child(1) {
+    animation: fadeInOut 4s infinite;
+}
+
+.animate-text:nth-child(2) {
+    animation: fadeInOut 4s infinite 1s; /* Starts after 1s */
+}
+
+.animate-text:nth-child(3) {
+    animation: fadeInOut 4s infinite 2s; /* Starts after 2s */
+}
+
+.animate-text:nth-child(4) {
+    animation: fadeInOut 4s infinite 3s; /* Starts after 3s */
+}
+
+@keyframes fadeInOut {
+    0%, 20% {
+        opacity: 1; /* Visible */
+    }
+    25%, 100% {
+        opacity: 0; /* Hidden */
+    }
+}
+span{
+    color: #ff5e00;
+}
+.home-img {
+    position: relative;
+    right: 20px;
+    z-index: 1;
+}
+
+.home-img .img-item {
+    max-width: 400px; /* Ensure the image is appropriately sized */
+    border-radius: 10px;
+    opacity: 0.8; /* Optional: Make the image slightly transparent */
+}
+.btn-sci {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.btn-sci a {
+    text-decoration: none; /* Remove underline from links */
+    font-size: 30px; /* Adjust icon size */
+    color: #fff; /* Base color for icons */
+    background-color: rgba(255, 165, 0, 0.7); /* Neon orange background */
+    padding: 10px; /* Padding around the icon */
+    border-radius: 50%; /* Circular buttons */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transitions */
+    display: flex; /* Center the icon */
+    align-items: center; 
+    justify-content: center; 
+}
+
+.btn-sci a:hover {
+    background-color: rgba(255, 165, 0, 1); /* Darken the background on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+.about {
+    display: flex;
+    align-items: center;
+    padding: 60px 9%;
+    color: #fff;
+}
+
+.about-info {
+    max-width: 500px;
+    margin-right: 40px; /* Increased space between text and image */
+}
+
+.about-info h1 {
+    font-size: 50px;
+    opacity: 0.8; /* Adjust this value (0 to 1) for desired opacity */
+}
+.profile-title {
+    color: #ff000069;
+}
+
+
+.about-info h2 {
+    font-size: 24px; /* Adjusted for appeal */
+    margin-top: 20px;
+}
+
+.about-info p {
+    font-size: 18px; /* Adjusted for appeal */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Profile image styling */
+.about-img {
+    margin-top: 0; /* Reset any margin */
+}
+
+.about-img .img-box {
+    position: relative;
+    width: 250px; /* Increased size for appeal */
+    height: 250px; /* Increased size for appeal */
+    border-radius: 50%; /* Circular image */
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Rotating green border */
+.about-img .img-box::before,
+.about-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 300px; /* Increased to match image size */
+    height: 300px; /* Increased to match image size */
+    background: conic-gradient(transparent, transparent, transparent, rgba(150, 1, 1, 0.863));
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.about-img .img-box::after {
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.about-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.about-img .img-box .img-item img {
+    width: 100%;
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    mix-blend-mode: lighten;
+}
+
+/* Skill Bars */
+.skill-bar {
+    margin-bottom: 15px; /* Space between skill bars */
+}
+
+.skill-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Skill Container Styling */
+.skill-container {
+    background: #444; /* Background for the skill bar */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the progress is contained */
+    height: 20px; /* Height of skill bar */
+}
+
+/* Unique colors for each skill bar */
+.skill-progress-html {
+    background: #a1f506; 
+}
+
+.skill-progress-CSharp {
+    background: rgb(255, 60, 0); 
+}
+
+.skill-progress-js {
+    background: yellow; 
+}
+
+.skill-progress-python {
+    background: rgb(255, 60, 0);
+}
+
+/* Applying transition effect to each skill bar */
+.skill-progress {
+    height: 100%; /* Full height of the container */
+    transition: width 0.5s ease; /* Smooth transition */
+}
+/* Styling for labels and values in personal information */
+.personal-info .label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ff000069; /* Bright neon orange for labels */
+    margin-right: 8px;
+    display: inline-block;
+    width: 100px; /* Ensures alignment */
+    text-transform: uppercase;
+}
+
+.personal-info .value {
+    font-weight: normal;
+    font-size: 18px;
+    color: #e0e0e0; /* Light gray for better readability */
+    opacity: 0.9;
+    display: inline-block;
+}
+
+
+
+/* Portfolio Section Styles */
+.portfolio {
+    padding: 100px 9% 20px; /* Adjust padding */
+    color: #fff;
+    min-height: calc(100vh - 75px); /* Adjust for navbar height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content at the top */
+}
+
+.portfolio h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Add ease-in-out for smooth effect */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Scale the project card on hover */
+}
+
+.project img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Add ease-in-out for smooth effect */
+}
+
+.project:hover img {
+    transform: scale(1.1); /* Zoom in image on hover */
+}
+
+/* Adding delay for the hover effect */
+.project:hover {
+    transition-delay: 0.1s; /* Delay for the card scale */
+}
+
+.project img {
+    transition-delay: 0.1s; /* Delay for the image scale */
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.project-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #080808;
+    color: #fff;
+    position: relative; /* Ensure footer behaves properly */
+    bottom: 0; /* Align footer at the bottom */
+    width: 100%; /* Full width */
+}
+
